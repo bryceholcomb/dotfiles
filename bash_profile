@@ -8,6 +8,8 @@ source "$HOME/.rvm/scripts/rvm"
   cd "$(dirname $(gem which $1))"
 }
 
+alias dotfiles="cd ~/.dotfiles"
+
 # Git aliases
 alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
@@ -88,11 +90,8 @@ alias be="bundle exec"
     alias turing='cd ~/Turing'
     alias projects='cd ~/Turing/projects'
 
-    #traffic_spy
-    alias tsreset='TRAFFIC_SPY_ENV=test rake db:reset && TRAFFIC_SPY_ENV=test rake db:migrate'
-    alias tsresetpg='rake db:reset && rake db:migrate'
-    alias tstest='bundle exec ruby'
-    alias ts='cd ~/Turing/projects/traffic_spy'
+    #dinner dash
+    alias dd='cd ~/Turing/projects/dinner_dash'
 
     # next line
     ps1="${ps1}\n\$ "
