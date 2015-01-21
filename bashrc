@@ -30,7 +30,8 @@ alias gr="git remote -v"
 alias gra="git remote add"
 alias gf="git fetch"
 alias gr="git rebase"
-
+alias gp="git push"
+alias git push='echo "Use gp!" && git push'
 
 # shortcut to vimrc
 alias vimrc="vim ~/.vimrc"
