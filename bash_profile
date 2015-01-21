@@ -15,12 +15,19 @@ alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
 alias gc="git checkout"
 alias gb="git branch"
+alias gbr="git branch -r"
 alias ga="git add"
 alias gh="git hist"
 alias gcm="git commit -m"
+alias gr="git remote -v"
+alias gra="git remote add"
+
 
 # shortcut to vimrc
 alias vimrc="vim ~/.vimrc"
+
+# shortcut to bash_profile
+alias bash="vim ~/.bash_profile"
 
 # fancy ls command
 # -l  long format
