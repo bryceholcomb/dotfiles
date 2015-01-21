@@ -36,7 +36,7 @@ alias gr="git rebase"
 alias vimrc="vim ~/.vimrc"
 
 # shortcut to bash_profile
-alias bash="vim ~/.bash_profile"
+alias bash="vim ~/.bashrc"
 
 # fancy ls command
 # -l  long format

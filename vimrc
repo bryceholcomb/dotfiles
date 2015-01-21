@@ -128,7 +128,9 @@ map <Leader>hl yss<li>
 "" Convenience
 nmap <Leader>p orequire "pry"<CR>binding.pry<ESC>;       " pry insertion
 vnoremap . :norm.<CR>;                                   " in visual mode, "." will for each line, go into normal mode and execute the "."
-nnoremap <C-S> <ESC>:w!<CR>;                             " remap save
+map <C-S> <ESC>:w!<CR>;                                  " remap save
+imap <C-S> <ESC>:w!<CR>
+map <C-Q> :close<CR>
 
 " replaces %/ with current directory, and %% with current file
 cmap %/ <C-R>=expand("%:p:h")."/"<CR>;
