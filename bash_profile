@@ -21,6 +21,8 @@ alias gh="git hist"
 alias gcm="git commit -m"
 alias gr="git remote -v"
 alias gra="git remote add"
+alias gf="git fetch"
+alias gr="git rebase"
 
 
 # shortcut to vimrc
