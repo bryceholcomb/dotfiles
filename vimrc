@@ -110,9 +110,9 @@ let mapleader = ","
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
 "Vim rails shortcuts
-map <Leader>vu :RVunittest<CR>   "mapping Vim.rails command to corresponding unit test
-map <Leader>vm :RVmodel<cr>
-map <Leader>vv :RVview<cr>
+map <Leader>vu :RVunittest<CR>
+map <Leader>vm :RVmodel<CR>
+map <Leader>vv :RVview<CR>
 
 "" Surround.vim shortcuts
 map <Leader>s yss
@@ -128,7 +128,7 @@ map <Leader>hl yss<li>
 "" Convenience
 nmap <Leader>p orequire "pry"<CR>binding.pry<ESC>;       " pry insertion
 vnoremap . :norm.<CR>;                                   " in visual mode, "." will for each line, go into normal mode and execute the "."
-nnoremap <Leader>w <ESC>:w!<CR>;                             " remap save
+nnoremap <C-S> <ESC>:w!<CR>;                             " remap save
 
 " replaces %/ with current directory, and %% with current file
 cmap %/ <C-R>=expand("%:p:h")."/"<CR>;
