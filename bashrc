@@ -110,6 +110,9 @@ alias be="bundle exec"
     #dinner dash
     alias dd='cd ~/Turing/projects/dinner_dash'
 
+    #denver parks project
+    alias parks='cd ~/Turing/projects/denver_parks'
+
     # next line
     ps1="${ps1}\n\$ "
 
