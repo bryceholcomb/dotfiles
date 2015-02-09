@@ -114,7 +114,7 @@ alias be="bundle exec"
     alias parks='cd ~/Turing/projects/denver_parks'
 
     #the pivot
-    alias tp = 'cd ~/Turing/projects/the_pivot'
+    alias tp='cd ~/Turing/projects/the_pivot'
 
     # next line
     ps1="${ps1}\n\$ "
