@@ -109,6 +109,9 @@ let mapleader = ","
 " filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
+" allow bash aliases in vim default shell
+let $BASH_ENV = "~/.bash_aliases"
+
 "Vim rails shortcuts
 map <Leader>vu :RVunittest<CR>
 map <Leader>vm :RVmodel<CR>
