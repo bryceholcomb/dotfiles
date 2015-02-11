@@ -116,6 +116,9 @@ alias be="bundle exec"
     #the pivot
     alias tp='cd ~/Turing/projects/the_pivot'
 
+    #my blog
+    alias blog='cd ~/Turing/projects/personal_blog'
+
     # next line
     ps1="${ps1}\n\$ "
 
