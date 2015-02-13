@@ -282,6 +282,21 @@ function! RunNearestTest()
   call RunTestFile(":" . spec_line_number . " -b")
 endfunction
 
+function! CorrectTestRunner()
+  if match(expand('%'), '\.feature$') != -1
+    return "cucumber"
+  elseif match(expand('%'), '_spec\.rb$') != -1
+    return "rspec"
+  elseif match(expand('%'), '_test\.rb$') != -1
+    return "test"
+  endif
+endfunction
+
+function! RunCurrentLineInTest()
+  execute "!" . CorrectTestRunner() expand('%:p') . ":" . line(".")
+endfunction
+
 " run test runner
 map <leader>t :call RunTestFile()<cr>
 map <leader>nt :call RunNearestTest()<cr>
+map <leader>st :call RunCurrentLineInTest()<cr>
