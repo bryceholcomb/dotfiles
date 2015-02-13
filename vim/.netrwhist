@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/bryceholcomb/.heroku/client/bin'
+let g:netrw_dirhist_2='/Users/bryceholcomb/.heroku/client/data'
+let g:netrw_dirhist_3='/Users/bryceholcomb/.heroku/client/lib'
+let g:netrw_dirhist_4='/Users/bryceholcomb/Turing/javascript/testing-javascript/examples/1-basic-qunit'
+let g:netrw_dirhist_5='/Users/bryceholcomb/dotfiles'
