@@ -119,6 +119,8 @@ let $BASH_ENV = "~/.bash_aliases"
 map <Leader>vu :RVunittest<CR>
 map <Leader>vm :RVmodel<CR>
 map <Leader>vv :RVview<CR>
+map <Leader>m :Rmodel<CR>
+map <Leader>c :Rcontroller<CR>
 
 "" Surround.vim shortcuts
 map <Leader>s yss
@@ -152,11 +154,8 @@ let g:ctrlp_match_window_reversed = 0
 " use silver searcher for ctrlp
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-" map Silver Searcher
-map <leader>a :Ag!<space>
-
 " Vim RSPEC keybindings
-map <Leader>cs :call RunCurrentSpecFile()<CR>
+map <Leader>rc :call RunCurrentSpecFile()<CR>
 map <Leader>ns :call RunNearestSpec()<CR>
 map <Leader>ls :call RunLastSpec()<CR>
 map <Leader>as :call RunAllSpecs()<CR>
@@ -176,18 +175,18 @@ au  BufRead,BufNewFile *.elm setfiletype haskell
 " unmap ex mode: 'Type visual to go into Normal mode.'
 nnoremap Q <nop>
 
-" map markdown preview
-map <leader>m :!open -a Marked %<cr><cr>
-
-" map git commands
-map <leader>gb :Gblame<cr>
-map <leader>gl :!clear && git log -p %<cr>
-map <leader>gd :!clear && git diff %<cr>
-map <leader>gc :!git checkout
-map <leader>gcm :!git commit -m
-map <leader>gs :!git status<cr>
-map <leader>gh :!git hist<cr>
+map <leader>a :Ag!<space>
+map <Leader>m :!open -a Marked %<cr><cr>
+map <Leader>gb :Gblame<cr>
+map <Leader>gl :!clear && git log -p %<cr>
+map <Leader>gd :!clear && git diff %<cr>
+map <Leader>gc :!git checkout
+map <Leader>gcm :!git commit -m
+map <Leader>gs :!git status<cr>
+map <Leader>gh :!git hist<cr>
 map <leader>ga :!git add
+map <Leader>i mmgg=G`m<cr>
+map <Leader>sc :sp db/schema.rb<cr>
 
 " clear the command line and search highlighting
 noremap <c-c> :nohlsearch<CR>
