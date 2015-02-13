@@ -127,7 +127,6 @@ map <Leader>hu yss<ul>
 map <Leader>ho yss<ol>
 map <Leader>hl yss<li>
 
-
 "" Convenience
 nmap <Leader>p orequire "pry"<CR>binding.pry<ESC>;       " pry insertion
 vnoremap . :norm.<CR>;                                   " in visual mode, "." will for each line, go into normal mode and execute the "."
@@ -149,7 +148,8 @@ let g:ctrlp_match_window_reversed = 0
 " use silver searcher for ctrlp
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
-
+" map Silver Searcher
+map <leader>a :Ag!<space>
 
 " Vim RSPEC keybindings
 map <Leader>cs :call RunCurrentSpecFile()<CR>
@@ -157,7 +157,7 @@ map <Leader>ns :call RunNearestSpec()<CR>
 map <Leader>ls :call RunLastSpec()<CR>
 map <Leader>as :call RunAllSpecs()<CR>
 
-"" easier navigation between split windows
+" easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
