@@ -222,7 +222,7 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-" rename current file, via Gary Bernhardt
+" rename current file
 function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'))
