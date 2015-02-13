@@ -283,17 +283,15 @@ function! RunNearestTest()
 endfunction
 
 function! CorrectTestRunner()
-  if match(expand('%'), '\.feature$') != -1
+  if match(expand('%%'), '\.feature$') != -1
     return "cucumber"
-  elseif match(expand('%'), '_spec\.rb$') != -1
+  elseif match(expand('%%'), '_spec\.rb$') != -1
     return "rspec"
-  elseif match(expand('%'), '_test\.rb$') != -1
-    return "test"
   endif
 endfunction
 
 function! RunCurrentLineInTest()
-  execute "!" . CorrectTestRunner() expand('%:p') . ":" . line(".")
+  execute "!" . CorrectTestRunner() expand('%%:p') . ":" . line(".")
 endfunction
 
 " run test runner
