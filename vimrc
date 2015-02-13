@@ -36,6 +36,9 @@ set nofoldenable                  " disable code folding
 set clipboard=unnamed             " use the system clipboard
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
+set nobackup
+set nowritebackup
+set noswapfile
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 
 " put git status, column/row number, total lines, and percentage in status
@@ -129,6 +132,7 @@ map <Leader>hl yss<li>
 
 "" Convenience
 nmap <Leader>p orequire "pry"<CR>binding.pry<ESC>;       " pry insertion
+nmap <Leader>so osave_and_open_page<ESC>;                " insert launchy gem save and open page on line below
 vnoremap . :norm.<CR>;                                   " in visual mode, "." will for each line, go into normal mode and execute the "."
 map <C-S> <ESC>:w!<CR>;                                  " remap save
 imap <C-S> <ESC>:w!<CR>
