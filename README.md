@@ -1,6 +1,6 @@
 #My dotfile configurations
 
-Big thanks to [Chris Hunt](https://github.com/chrishunt) and [Ben Orenstein](https://github.com/r00k) as most of this was graciously pulled from them.
+Big thanks to [Chris Hunt](https://github.com/chrishunt) and [Ben Orenstein](https://github.com/r00k) as most of this was pulled from them.
 
 ##To-dos
 - add vim multiple cursors
