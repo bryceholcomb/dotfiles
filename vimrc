@@ -140,6 +140,8 @@ map <C-S> <ESC>:w!<CR>;                                  " remap save
 imap <C-S> <ESC>:w!<CR>
 map <C-Q> :q<CR>
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " replaces %/ with current directory, and %% with current file
 cmap %/ <C-R>=expand("%:p:h")."/"<CR>;
 cmap %% <C-R>=expand("%")<CR>;
