@@ -116,6 +116,9 @@ alias be="bundle exec"
     #the pivot
     alias tp='cd ~/Turing/projects/the_pivot'
 
+    #RiderDemand project
+    alias rd='cd ~/Turing/projects/RiderDemand'
+
     #my blog
     alias blog='cd ~/Turing/projects/personal_blog'
 

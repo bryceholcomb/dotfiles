@@ -33,7 +33,6 @@ capybara-*.html
 *.orig
 rerun.txt
 .project
-config/secrets.yml
 
 # Ruby related
 *.gem
