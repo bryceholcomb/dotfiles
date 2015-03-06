@@ -4,6 +4,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # Load rvm so you can access Ruby
 source "$HOME/.rvm/scripts/rvm"
 
@@ -33,6 +35,25 @@ alias gr="git rebase"
 alias gpush="git push"
 alias gpull="git pull"
 
+#turing
+alias turing='cd ~/Turing'
+alias projects='cd ~/Turing/projects'
+
+#dinner dash
+alias dd='cd ~/Turing/projects/dinner_dash'
+
+#denver parks project
+alias parks='cd ~/Turing/projects/denver_parks'
+
+#the pivot
+alias tp='cd ~/Turing/projects/the_pivot'
+
+#RiderDemand project
+alias rd='cd ~/Turing/projects/RiderDemand'
+
+#my blog
+alias blog='cd ~/Turing/projects/personal_blog'
+
 # shortcut to vimrc
 alias vimrc="vim ~/.vimrc"
 
@@ -58,10 +79,10 @@ eval "$(hub alias -s)"
 
 # give the fullpaths of files passed in argv or piped through stdin
 function fullpath {
-  ruby -e '
-    $stdin.each_line { |path| puts File.expand_path path }  if ARGV.empty?
-    ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
-  ' "$@"
+ruby -e '
+$stdin.each_line { |path| puts File.expand_path path }  if ARGV.empty?
+ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
+' "$@"
 }
 
 # Enable git's tab-completion library
@@ -71,62 +92,43 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 alias be="bundle exec"
 
 # Prompt
-  function parse_git_branch {
-    branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
-    if [ "HEAD" = "$branch" ]; then
-      echo "(no branch)"
-    else
-      echo "$branch"
-    fi
+function parse_git_branch {
+branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
+if [ "HEAD" = "$branch" ]; then
+  echo "(no branch)"
+else
+  echo "$branch"
+fi
   }
 
   function prompt_segment {
-    # for colours: http://en.wikipedia.org/wiki/ANSI_escape_code#Colors
-    # change the 37 to change the foreground
-    # change the 45 to change the background
-    if [[ ! -z "$1" ]]; then
-      echo "\[\033[${2:-37};45m\]${1}\[\033[0m\]"
-    fi
-  }
+  # for colours: http://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+  # change the 37 to change the foreground
+  # change the 45 to change the background
+  if [[ ! -z "$1" ]]; then
+    echo "\[\033[${2:-37};45m\]${1}\[\033[0m\]"
+  fi
+}
 
-  function build_mah_prompt {
-    # time
-    ps1="$(prompt_segment " \@ ")"
+function build_mah_prompt {
+# time
+ps1="$(prompt_segment " \@ ")"
 
-    # cwd
-    ps1="${ps1} $(prompt_segment " \w ")"
+# cwd
+ps1="${ps1} $(prompt_segment " \w ")"
 
-    # git branch
-    git_branch=`parse_git_branch`
-    if [[ ! -z "$git_branch" ]]
-    then
-      ps1="${ps1} $(prompt_segment " $git_branch " 32)"
-    fi
+# git branch
+git_branch=`parse_git_branch`
+if [[ ! -z "$git_branch" ]]
+then
+  ps1="${ps1} $(prompt_segment " $git_branch " 32)"
+fi
 
-    #turing
-    alias turing='cd ~/Turing'
-    alias projects='cd ~/Turing/projects'
+# next line
+ps1="${ps1}\n\$ "
 
-    #dinner dash
-    alias dd='cd ~/Turing/projects/dinner_dash'
-
-    #denver parks project
-    alias parks='cd ~/Turing/projects/denver_parks'
-
-    #the pivot
-    alias tp='cd ~/Turing/projects/the_pivot'
-
-    #RiderDemand project
-    alias rd='cd ~/Turing/projects/RiderDemand'
-
-    #my blog
-    alias blog='cd ~/Turing/projects/personal_blog'
-
-    # next line
-    ps1="${ps1}\n\$ "
-
-    # set prompt output
-    PS1="$ps1"
-  }
+# set prompt output
+PS1="$ps1"
+}
 
   PROMPT_COMMAND='build_mah_prompt'
