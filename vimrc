@@ -100,6 +100,9 @@ set tabstop=2 shiftwidth=2        " a tab is two spaces (or set this to 4)
 set expandtab                     " use spaces, not tabs (optional)
 set backspace=indent,eol,start    " backspace through everything in insert mode
 
+" Automatically wrap at 80 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
 " airline
 let g:airline#extensions#tabline#enabled = 1
 
