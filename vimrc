@@ -122,6 +122,7 @@ let $BASH_ENV = "~/.bash_aliases"
 map <Leader>vu :RVunittest<CR>
 map <Leader>vm :RVmodel<CR>
 map <Leader>vv :RVview<CR>
+map <Leader>vc :RVcontroller<CR>
 map <Leader>m :Rmodel<CR>
 map <Leader>c :Rcontroller<CR>
 
