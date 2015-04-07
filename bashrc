@@ -48,6 +48,9 @@ alias parks='cd ~/Turing/projects/denver_parks'
 #the pivot
 alias tp='cd ~/Turing/projects/the_pivot'
 
+#feed_engine
+alias fe='cd ~/Turing/projects/feed_engine'
+
 #RiderDemand project
 alias rd='cd ~/Turing/projects/RiderDemand'
 
