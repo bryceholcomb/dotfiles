@@ -14,7 +14,11 @@ source "$HOME/.rvm/scripts/rvm"
   cd "$(dirname $(gem which $1))"
 }
 
-alias dotfiles="cd ~/.dotfiles"
+cdls () {
+  cd "$@" && ls -lFGgohq;
+}
+
+alias dotfiles="cd ~/.dotfiles && l"
 
 # disable control flow commands to remap <c-s> in vim
 stty -ixon
@@ -36,26 +40,29 @@ alias gpush="git push"
 alias gpull="git pull"
 
 #turing
-alias turing='cd ~/Turing'
-alias projects='cd ~/Turing/projects'
+alias turing='cd ~/Turing && l'
+alias projects='cd ~/Turing/projects && l'
 
 #dinner dash
-alias dd='cd ~/Turing/projects/dinner_dash'
+alias dd='cd ~/Turing/projects/dinner_dash && vim'
 
 #denver parks project
-alias parks='cd ~/Turing/projects/denver_parks'
+alias parks='cd ~/Turing/projects/denver_parks && vim'
+
+#job basket
+alias jb='cd ~/Turing/projects/job_basket && vim'
 
 #the pivot
-alias tp='cd ~/Turing/projects/the_pivot'
+alias tp='cd ~/Turing/projects/the_pivot && vim'
 
 #feed_engine
-alias fe='cd ~/Turing/projects/feed_engine'
+alias fe='cd ~/Turing/projects/feed_engine && vim'
 
 #RiderDemand project
-alias rd='cd ~/Turing/projects/RiderDemand'
+alias rd='cd ~/Turing/projects/RiderDemand && vim'
 
 #my blog
-alias blog='cd ~/Turing/projects/personal_blog'
+alias blog='cd ~/Turing/projects/personal_blog && vim'
 
 # shortcut to vimrc
 alias vimrc="vim ~/.vimrc"
