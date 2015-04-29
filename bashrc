@@ -35,9 +35,12 @@ alias gcm="git commit -m"
 alias gr="git remote -v"
 alias gra="git remote add"
 alias gf="git fetch"
-alias gr="git rebase"
 alias gpush="git push"
 alias gpull="git pull"
+
+#fun and profit
+alias fp='cd ~/fun_and_profit && l'
+alias im='cd ~/fun_and_profit/invite-me && vim'
 
 #turing
 alias turing='cd ~/Turing && l'
