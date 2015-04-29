@@ -40,7 +40,7 @@ alias gpull="git pull"
 
 #fun and profit
 alias fp='cd ~/fun_and_profit && l'
-alias im='cd ~/fun_and_profit/invite-me && vim'
+alias im='cd ~/fun_and_profit/invite-me-api && vim'
 
 #turing
 alias turing='cd ~/Turing && l'
