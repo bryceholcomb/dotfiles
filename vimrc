@@ -49,7 +49,7 @@ set background=dark
 colorscheme jellybeans
 
 " fire up NERDTree when loading VIM
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " set up some custom colors
 highlight clear SignColumn

@@ -19,6 +19,7 @@ cdls () {
 }
 
 alias dotfiles="cd ~/.dotfiles && l"
+alias md="touch ~/notes/new_note.md && vim ~/notes/new_note.md"
 
 # disable control flow commands to remap <c-s> in vim
 stty -ixon
