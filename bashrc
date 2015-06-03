@@ -43,6 +43,9 @@ alias gpull="git pull"
 alias fp='cd ~/fun_and_profit && l'
 alias im='cd ~/fun_and_profit/invite-me-api && vim'
 
+#sweeps
+alias sweeps='cd ~/Sweeps && vim'
+
 #turing
 alias turing='cd ~/Turing && l'
 alias projects='cd ~/Turing/projects && l'
