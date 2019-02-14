@@ -15,3 +15,7 @@ alias gf="git fetch"
 alias gr="git rebase"
 alias gpush="git push"
 alias gpull="git pull"
+
+alias build='bundle exec rails test '\''test/**/*_test.rb'\'''
+alias cu='git pull upstream master --rebase && git push origin master'
+alias data_reset='rake db:drop && rake db:setup && rake db:migrate && rake db:fixtures:load && rake db:seed'

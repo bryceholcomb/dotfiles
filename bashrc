@@ -44,7 +44,7 @@ alias fp='cd ~/fun_and_profit && l'
 alias im='cd ~/fun_and_profit/invite-me-api && vim'
 
 #sweeps
-alias sweeps='cd ~/Sweeps && vim'
+alias sweeps='cd ~/sweeps && vim'
 
 #turing
 alias turing='cd ~/Turing && l'
