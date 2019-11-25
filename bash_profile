@@ -1,4 +1,2 @@
 source ~/.profile
 source ~/.bashrc
-
-

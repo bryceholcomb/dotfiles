@@ -1,9 +1,3 @@
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Load rvm so you can access Ruby
@@ -39,31 +33,12 @@ alias gf="git fetch"
 alias gpush="git push"
 alias gpull="git pull"
 
-#fun and profit
-alias fp='cd ~/fun_and_profit && l'
-alias im='cd ~/fun_and_profit/invite-me-api && vim'
+alias build='./node_modules/.bin/eslint app/javascript/components && yarn test && bundle exec rails test '\''test/**/*_test.rb'\'''
+alias cu='git pull upstream xyz --rebase && git push origin xyz'
+alias data_reset='rake db:drop && rake db:setup && rake db:migrate && rake db:fixtures:load && rake db:seed'
 
 #sweeps
 alias sweeps='cd ~/sweeps && vim'
-
-#turing
-alias turing='cd ~/Turing && l'
-alias projects='cd ~/Turing/projects && l'
-
-#dinner dash
-alias dd='cd ~/Turing/projects/dinner_dash && vim'
-
-#denver parks project
-alias parks='cd ~/Turing/projects/denver_parks && vim'
-
-#job basket
-alias jb='cd ~/Turing/projects/job_basket && vim'
-
-#the pivot
-alias tp='cd ~/Turing/projects/the_pivot && vim'
-
-#feed_engine
-alias fe='cd ~/Turing/projects/feed_engine && vim'
 
 #RiderDemand project
 alias rd='cd ~/Turing/projects/RiderDemand && vim'
@@ -90,10 +65,6 @@ alias l="ls -lFGgohq"
 # git auto-completion
 source ~/.git-completion.bash
 
-# enables 'git hub'
-eval "$(hub alias -s)"
-
-
 # give the fullpaths of files passed in argv or piped through stdin
 function fullpath {
 ruby -e '
@@ -101,9 +72,6 @@ $stdin.each_line { |path| puts File.expand_path path }  if ARGV.empty?
 ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
 ' "$@"
 }
-
-# Enable git's tab-completion library
-source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # Shortcut for bundle exec
 alias be="bundle exec"
@@ -149,3 +117,4 @@ PS1="$ps1"
 }
 
 PROMPT_COMMAND='build_mah_prompt'
+PATH=$PATH:/usr/local/bin
