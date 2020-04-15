@@ -14,6 +14,8 @@ cdls () {
 
 alias dotfiles="cd ~/.dotfiles && l"
 alias md="touch ~/notes/new_note.md && vim ~/notes/new_note.md"
+alias sbp="source ~/.bash_profile"
+alias vbp="vim ~/.bash_profile; source ~/.bash_profile"
 
 # disable control flow commands to remap <c-s> in vim
 stty -ixon
@@ -32,10 +34,13 @@ alias gra="git remote add"
 alias gf="git fetch"
 alias gpush="git push"
 alias gpull="git pull"
-
-alias build='./node_modules/.bin/eslint app/javascript/components && yarn test && bundle exec rails test '\''test/**/*_test.rb'\'''
+alias devs="./bin/webpack-dev-server"
+alias build='./node_modules/.bin/eslint app/javascript/ app/javascript/components && yarn test && rubocop && bundle exec rails test '\''test/**/*_test.rb'\'''
 alias cu='git pull upstream xyz --rebase && git push origin xyz'
 alias data_reset='rake db:drop && rake db:setup && rake db:migrate && rake db:fixtures:load && rake db:seed'
+
+#legalpad
+alias novo='cd ~/legalpad/novo'
 
 #sweeps
 alias sweeps='cd ~/sweeps && vim'
@@ -117,4 +122,5 @@ PS1="$ps1"
 }
 
 PROMPT_COMMAND='build_mah_prompt'
-PATH=$PATH:/usr/local/bin
+export PATH="/usr/local/bin:$PATH"
+PATH="${PATH}:~/legalpad/cloud/bin"
