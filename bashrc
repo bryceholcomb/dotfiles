@@ -33,14 +33,14 @@ alias gr="git remote -v"
 alias gra="git remote add"
 alias gf="git fetch"
 alias gpush="git push"
-alias gpull="git pull"
+alias push="git push"
+alias gpull="git pull --rebase"
+alias pull="git pull --rebase"
 alias devs="./bin/webpack-dev-server"
 alias build='./node_modules/.bin/eslint app/javascript/ app/javascript/components && yarn test && rubocop && bundle exec rails test '\''test/**/*_test.rb'\'''
 alias cu='git pull upstream xyz --rebase && git push origin xyz'
 alias data_reset='rake db:drop && rake db:setup && rake db:migrate && rake db:fixtures:load && rake db:seed'
-
-#legalpad
-alias novo='cd ~/legalpad/novo'
+alias test='bundle exec rails test '\''test/**/*_test.rb'\'
 
 #sweeps
 alias sweeps='cd ~/sweeps && vim'
@@ -123,4 +123,3 @@ PS1="$ps1"
 
 PROMPT_COMMAND='build_mah_prompt'
 export PATH="/usr/local/bin:$PATH"
-PATH="${PATH}:~/legalpad/cloud/bin"
