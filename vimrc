@@ -32,13 +32,14 @@ set ruler                         " show row and column in footer
 set scrolloff=2                   " minimum lines above/below cursor
 set laststatus=2                  " always show status bar
 set list listchars=tab:»·,trail:· " show extra space characters
-set nofoldenable                  " disable code folding
+set nofoldenable
 set clipboard=unnamed             " use the system clipboard
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
 set nobackup
 set nowritebackup
 set noswapfile
+set foldmethod=syntax
 runtime macros/matchit.vim        " use % to jump between start/end of methods
 
 " put git status, column/row number, total lines, and percentage in status
@@ -125,6 +126,8 @@ map <Leader>vv :RVview<CR>
 map <Leader>vc :RVcontroller<CR>
 map <Leader>m :Rmodel<CR>
 map <Leader>c :Rcontroller<CR>
+
+map <Leader>z za<CR>
 
 "" Surround.vim shortcuts
 map <Leader>s yss

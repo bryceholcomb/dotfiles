@@ -1,7 +1,9 @@
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# Load rvm so you can access Ruby
-source "$HOME/.rvm/scripts/rvm"
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`
 2gem () {
@@ -23,7 +25,8 @@ stty -ixon
 # Git aliases
 alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
-alias gc="git checkout"
+alias gcb="git checkout -b"
+alias gcheck="git checkout"
 alias gb="git branch"
 alias gbr="git branch -r"
 alias ga="git add"
@@ -41,9 +44,18 @@ alias build='./node_modules/.bin/eslint app/javascript/ app/javascript/component
 alias cu='git pull upstream xyz --rebase && git push origin xyz'
 alias data_reset='rake db:drop && rake db:setup && rake db:migrate && rake db:fixtures:load && rake db:seed'
 alias test='bundle exec rails test '\''test/**/*_test.rb'\'
+alias cypress='yarn run cypress open'
+alias cypresschrome='yarn run cypress run --browser chrome'
 
 #sweeps
 alias sweeps='cd ~/sweeps && vim'
+
+#launchnotes
+alias lnotes='cd ~/launchnotes'
+alias start='cd ~/launchnotes && ./start && pm2 stop puma && cd backend && ./bin/puma -C ./config/puma.rb'
+alias stop='cd ~/launchnotes && ./stop'
+alias lnreset='cd ~/launchnotes && ./stop && cd backend && rake graphql:schema:dump && cd .. && ./start'
+alias puma='arch -x86_64 ./bin/puma -C ./config/puma.rb'
 
 #RiderDemand project
 alias rd='cd ~/Turing/projects/RiderDemand && vim'
@@ -123,3 +135,8 @@ PS1="$ps1"
 
 PROMPT_COMMAND='build_mah_prompt'
 export PATH="/usr/local/bin:$PATH"
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
