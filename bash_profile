@@ -19,12 +19,6 @@ eval "$(rbenv init -)"
 
 git config --global user.email brycecholcomb@gmail.com
 
-# For SOR Database
-export HEROKU_DATABASE="dfupjonvi6fu2m"
-export HEROKU_DATABASE_HOST="ec2-54-147-203-50.compute-1.amazonaws.com"
-export HEROKU_DATABASE_USERNAME="jrxqwcykvvsvir"
-export HEROKU_DATABASE_PASSWORD="e3b9809f89206cd0de65c2d5298d88e4b2c56911b34b813d5b9689c00bed0614"
-
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
